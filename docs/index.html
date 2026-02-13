@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NoConsent — Privacy Policy</title>
+  <title>DenyStealthCookies — Privacy Policy</title>
   <style>
     :root {
       --bg: #0a0c0f; --surface: #111418; --border: #1e2530;
       --accent: #ff3b5c; --text: #e8edf5; --dim: #8a95a8; --faint: #3d4655;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif;
-           font-size: 15px; line-height: 1.7; max-width: 760px; margin: 0 auto; padding: 40px 24px; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 15px; line-height: 1.7;
+      max-width: 760px; margin: 0 auto; padding: 40px 24px;
+    }
     h1 { font-size: 2rem; color: var(--accent); margin-bottom: 6px; }
     .subtitle { color: var(--dim); margin-bottom: 40px; font-size: 0.9rem; }
-    h2 { font-size: 1.1rem; color: var(--text); margin: 32px 0 10px;
-         padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: 1.1rem; color: var(--text); margin: 32px 0 10px;
+      padding-bottom: 6px; border-bottom: 1px solid var(--border);
+    }
     p  { color: var(--dim); margin-bottom: 14px; }
     ul { color: var(--dim); margin: 0 0 14px 20px; }
     li { margin-bottom: 6px; }
@@ -26,26 +32,34 @@
     .highlight p { color: var(--text); margin: 0; font-weight: 600; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border);
-             color: var(--faint); font-size: 0.85rem; }
+    code {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 4px; padding: 1px 6px; font-size: 0.88rem;
+    }
     .badge {
-      display: inline-block; background: rgba(255,59,92,0.1); color: var(--accent);
-      border: 1px solid rgba(255,59,92,0.3); border-radius: 4px;
-      padding: 2px 10px; font-size: 0.8rem; margin-left: 8px; vertical-align: middle;
+      display: inline-block; background: rgba(255,59,92,0.1);
+      color: var(--accent); border: 1px solid rgba(255,59,92,0.3);
+      border-radius: 4px; padding: 2px 10px; font-size: 0.8rem;
+      margin-left: 8px; vertical-align: middle;
+    }
+    footer {
+      margin-top: 60px; padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--faint); font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>🚫 NoConsent</h1>
-  <p class="subtitle">Privacy Policy · Last updated: February 2026</p>
+  <h1>🚫 DenyStealthCookies</h1>
+  <p class="subtitle">Privacy Policy &nbsp;·&nbsp; Last updated: February 2026</p>
 
   <div class="highlight">
-    <p>TL;DR — NoConsent does not collect, store, or transmit any personal data whatsoever. It runs entirely in your browser.</p>
+    <p>TL;DR — DenyStealthCookies does not collect, store, or transmit any personal data whatsoever. It runs entirely inside your browser.</p>
   </div>
 
-  <h2>1. What NoConsent Does</h2>
-  <p>NoConsent is a Chrome browser extension that automatically denies non-essential cookie consents and closes consent banners on websites you visit. It operates entirely within your browser and does not communicate with any external server.</p>
+  <h2>1. What DenyStealthCookies Does</h2>
+  <p>DenyStealthCookies is a Chrome browser extension that automatically denies non-essential cookie consents and closes consent banners on websites you visit. It operates entirely within your browser and does not communicate with any external server by default.</p>
 
   <h2>2. Data We Do NOT Collect</h2>
   <ul>
@@ -53,45 +67,49 @@
     <li>We do not collect personal identifiers (name, email, IP address, device ID)</li>
     <li>We do not use cookies, pixels, or any tracking technology</li>
     <li>We do not store any information about which websites you use the extension on</li>
-    <li>We do not sell, share, or trade any data with third parties</li>
+    <li>We do not sell, share, or trade any data with third parties — ever</li>
   </ul>
 
   <h2>3. Optional Anonymous Telemetry <span class="badge">Opt-in only</span></h2>
-  <p>NoConsent includes an <strong>entirely optional</strong> telemetry feature that you must explicitly opt in to. If you choose to enable it, the extension sends a single anonymous ping when a denial is performed, containing <em>only</em>:</p>
+  <p>DenyStealthCookies includes an <strong>entirely optional</strong> telemetry feature that is <strong>off by default</strong>. You must explicitly enable it in the extension settings. If you choose to enable it, the extension sends a single anonymous ping when a denial is performed, containing <em>only</em>:</p>
   <ul>
-    <li>A randomly generated session ID (not tied to you or your device, regenerated each session)</li>
-    <li>The type of CMP detected (e.g. "OneTrust", "Cookiebot") — no domain or URL</li>
-    <li>The count of consents denied (e.g. "847")</li>
-    <li>The extension version number</li>
+    <li>A randomly generated session token — not tied to you, your device, or your account in any way, and regenerated each session</li>
+    <li>The type of consent management platform detected (e.g. "OneTrust" or "Cookiebot") — never the domain or URL of the site</li>
+    <li>The count of consents denied (e.g. "12")</li>
+    <li>The extension version number (e.g. "1.0.0")</li>
   </ul>
-  <p>This data contains <strong>no personally identifiable information</strong>. It is used solely to improve the extension by understanding which CMPs are most common. You can disable this at any time in the extension settings. Telemetry is <strong>off by default</strong>.</p>
-  <p>If telemetry is enabled, anonymous pings are sent to a Cloudflare Worker endpoint and stored in an aggregate-only database. No individual records are retained beyond 24 hours.</p>
+  <p>This data contains <strong>no personally identifiable information</strong>. It is used solely to improve the extension by understanding which consent platforms are most commonly encountered. You can disable telemetry at any time via the <strong>⚙ settings</strong> icon in the extension popup. Telemetry is <strong>off by default</strong> and must be actively switched on.</p>
 
   <h2>4. Permissions Explained</h2>
-  <p>NoConsent requests the following Chrome permissions:</p>
+  <p>DenyStealthCookies requests the following Chrome permissions, and uses each only for the purpose stated:</p>
   <ul>
-    <li><strong>activeTab</strong> — to read and modify the currently active tab when you click the button</li>
+    <li><strong>activeTab</strong> — to read and interact with the currently active tab when you click the extension button</li>
     <li><strong>scripting</strong> — to inject the consent-denial script into the active page</li>
-    <li><strong>storage</strong> — to save your preferences (telemetry opt-in, donation reminder) locally in your browser</li>
-    <li><strong>tabs</strong> — to detect the current page URL for display in the popup only</li>
-    <li><strong>&lt;all_urls&gt;</strong> — required because cookie banners appear on all websites; without this permission the extension cannot function on most sites</li>
+    <li><strong>storage</strong> — to save your preferences (auto-deny mode, telemetry opt-in, donation reminder dismissed) locally on your device only</li>
+    <li><strong>tabs</strong> — to read the current page URL for display inside the extension popup only; this is never transmitted anywhere</li>
+    <li><strong>&lt;all_urls&gt;</strong> — required because cookie banners appear on all websites. Without this permission the extension cannot function. No data from any site is collected or transmitted as a result of this permission.</li>
   </ul>
-  <p>All permissions are used solely for the extension's core function. No data obtained via these permissions leaves your device.</p>
 
   <h2>5. Local Storage Only</h2>
-  <p>Your opt-in/opt-out preferences are stored using Chrome's <code>storage.local</code> API, which keeps data on your device only. This data is never transmitted anywhere.</p>
+  <p>Your preferences (auto-deny on/off, telemetry opt-in, whether you dismissed the donation prompt) are stored using Chrome's <code>storage.local</code> API. This data lives only on your device and is never sent anywhere.</p>
 
-  <h2>6. Children's Privacy</h2>
-  <p>NoConsent does not knowingly collect data from anyone, including children under 13. The extension has no age-gated features.</p>
+  <h2>6. Single Purpose Statement</h2>
+  <p>DenyStealthCookies has a single purpose: to deny all non-essential cookie consents on your behalf, keeping only cookies that are technically necessary for sites to function. All permissions requested exist solely to enable this function.</p>
 
-  <h2>7. Changes to This Policy</h2>
-  <p>If we ever change this privacy policy in a material way, we will update the "Last updated" date above and note the changes in the Chrome Web Store listing. Your continued use of the extension constitutes acceptance of any updated policy.</p>
+  <h2>7. Children's Privacy</h2>
+  <p>DenyStealthCookies does not knowingly collect data from anyone, including children under 13. The extension has no user accounts, no sign-in, and no age-gated features.</p>
 
-  <h2>8. Contact</h2>
-  <p>Questions about this privacy policy? Open an issue at <a href="https://github.com/your-username/noconsent">github.com/your-username/noconsent</a> or email <a href="mailto:privacy@noconsent.io">privacy@noconsent.io</a>.</p>
+  <h2>8. Changes to This Policy</h2>
+  <p>If this privacy policy changes in a material way, the "Last updated" date above will be updated and changes will be noted in the Chrome Web Store listing. Your continued use of the extension constitutes acceptance of any updated policy.</p>
+
+  <h2>9. Contact</h2>
+  <p>Questions about this privacy policy? Open an issue at
+    <a href="https://github.com/YOUR-GITHUB-USERNAME/denystealth-cookies" target="_blank">github.com/YOUR-GITHUB-USERNAME/denystealth-cookies</a>
+    or email <a href="mailto:privacy@denystealth.io">privacy@denystealth.io</a>.
+  </p>
 
   <footer>
-    <p>NoConsent v1.0 · Open source · Built for people, not platforms · <a href="https://noconsent.io">noconsent.io</a></p>
+    <p>DenyStealthCookies v1.0 &nbsp;·&nbsp; Open source &nbsp;·&nbsp; Built for people, not platforms</p>
   </footer>
 
 </body>
